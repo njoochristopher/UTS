@@ -18,13 +18,13 @@ class CreditCardsPage extends StatelessWidget {
       // string ke int
       Color warnaKartu1;
       Color warnaKartu2;
-      int digitTerakhir = int.tryParse(digitTerakhirString) ?? 0;
       String digitTerakhir = nimMahasiswa.substring(nimMahasiswa.length -2);
-      if(digitTerakhir % 2 !=0){
+        int digitTerakhir = int.tryParse(digitTerakhirString) ?? 0;
+        if(digitTerakhir % 2 !=0){
       
-      } else {
+        } else {
     
-      }
+        }
     Color warnaKartu1 = Color(0xFF090943); // <- Ubah agar dinamis menggunakan logika IF
     Color warnaKartu2 = Color(0xFF000000); // <- Ubah agar dinamis menggunakan logika IF
 
@@ -57,7 +57,7 @@ class CreditCardsPage extends StatelessWidget {
             _buildAddCardButton(
               icon: const Icon(Icons.add),
               color: const Color(0xFF081603),
-            )
+            ),
           ],
         ),
       ),
@@ -104,7 +104,9 @@ class CreditCardsPage extends StatelessWidget {
       color: color,
       child: Container(
         height: 200,
-        // KODE UI ANDA DI SINI
+        String: cardNumber;
+        String: cardHolder;
+        String: cardExpiration;
         child: const Center(child: Text("UI Kartu belum dibuat...")),
       ),
     );
@@ -118,12 +120,33 @@ class CreditCardsPage extends StatelessWidget {
     // secara manual agar gambar tidak pecah atau overflow (terpotong).
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      children: <Widget>[
-        // KODE GAMBAR ANDA DI SINI
-      ],
+      children: children;
+      var children = <Widget>[
+        const Logo: contact_less.png
+        const Logo: mastercard.png// KODE GAMBAR ANDA DI SINI
+      ];
     );
   }
+
+  Container _buildDetailsBlock() {
+
+  }
   
+  Container _buildAddCardButton() {
+    home: Scaffold(
+      myApp: MyApp()(
+        leading: icon;
+        actions<Widget>[
+          IconButton (
+            icon: Icon(Icons.account_plus),
+              onPressed: () {
+
+            },
+          ),
+        ],
+      ),
+    );
+  }
   // buat Column berisi kontainer dan Informasi
 
   // buat   FloatingActionButton

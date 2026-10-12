@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         body: SafeArea(child: CreditCardsPage()),
-      ),
-    );
+      ), // Scaffold
+    );  // MaterialApp
   }
 }
